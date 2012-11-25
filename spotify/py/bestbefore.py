@@ -104,6 +104,7 @@ if __name__ == "__main__":
         sys.argv.pop(1)
         unittest.main()
     elif len(sys.argv) == 1:
-        pass
+       tup = read_input(sys.stdin.readlines())
+       print get_bestbefore(tup)
     else:
         print "Usage: %s [test]" % sys.argv[0]
