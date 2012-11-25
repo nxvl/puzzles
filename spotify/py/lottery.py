@@ -83,7 +83,7 @@ class ModuleTests(unittest.TestCase):
 
     def test_read_input(self):
         self.assertEqual(read_input([self.ina]), self.tupa)
-        self.assertEqual(read_input([self.inb]), self.tupb)
+        self.assertequal(read_input([self.inb]), self.tupb)
         self.assertEqual(read_input([self.inc]), self.tupc)
 
     def test_get_needed_winners(self):
@@ -120,4 +120,4 @@ if __name__ == "__main__":
         x = get_needed_winners(t, p)
         print get_probability(m, n, p, x)
     else:
-        print "Usage: ./lottery.py [test]"
+        print "Usage: %s [test]" % sys.argv[0]
